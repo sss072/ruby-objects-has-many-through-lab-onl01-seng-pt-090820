@@ -10,7 +10,7 @@ class Doctor
     @@all 
   end 
   def new_appointment(date, patient)
-    appointment_placeholder = Appointment.new(date, patient, doctor)
+    appointment_placeholder = Appointment.new(date, patient, self)
   end 
   def appointments 
     Appointment.all.select do |element|
